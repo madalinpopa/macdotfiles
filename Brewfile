@@ -4,6 +4,7 @@ brew "git"
 brew "lazygit"
 brew "tmux"
 brew "gcc"
+brew "rustup"
 brew "mise"
 brew "gemini-cli"
 
@@ -27,6 +28,7 @@ brew "fzf"
 brew "ripgrep"
 brew "sk"
 brew "gh"
+brew "wget"
 
 # FONTS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
