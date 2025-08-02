@@ -3,4 +3,5 @@
 # you can set these with `mise use -g`
 node = 'lts'
 go = 'latest'
+lua = '5.1'
 
