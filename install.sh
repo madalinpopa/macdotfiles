@@ -41,5 +41,13 @@ if [ -f "${LIB_PATH}/post_install_tmux.sh" ]; then
     bash "${LIB_PATH}/post_install_tmux.sh"
 fi
 
+if [ -f "${LIB_PATH}/post_install_rust.sh" ]; then
+    bash "${LIB_PATH}/post_install_rust.sh"
+fi
+
+if [ -f "${LIB_PATH}/post_install_npm.sh" ]; then
+    bash "${LIB_PATH}/post_install_npm.sh"
+fi
+
 print_header "Installation Complete!"
 echo "Please restart your terminal for all changes to take effect."
