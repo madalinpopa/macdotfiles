@@ -9,10 +9,14 @@ print_header "Step 4: Running Post-Installation Tasks"
 if command_exists mise; then
   echo "  -> Running 'mise install'. This might take a moment..."
   mise install &>/dev/null
+
+  # activate mise zsh
+  eval "$(mise activate --shims)"
   echo "  -> 'mise install' complete."
 else
   echo "  -> Skipping 'mise install' (command not found)."
 fi
+
 
 # --- Create Local User Files ---
 echo "  -> Ensuring local user files exist..."
