@@ -10,6 +10,7 @@ brew "gemini-cli"
 
 # APPLICATIONS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+cask "1password"
 cask "1password-cli"
 cask "jetbrains-toolbox"
 cask "ghostty"
