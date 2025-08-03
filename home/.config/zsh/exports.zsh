@@ -59,3 +59,8 @@ export PYTHONIOENCODING="UTF-8"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
+# ----------------------------------------------------------------------
+# Others
+# ----------------------------------------------------------------------
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
