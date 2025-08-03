@@ -1,10 +1,13 @@
+
 return {
     'echasnovski/mini.nvim',
     version = false,
     lazy = false,
-    name = "mini.pick",
     priority = 100,
-    config = true,
+    config = function()
+      require("mini.pick").setup()
+      require("mini.extra").setup()
+    end,
     keys = {
         { "<leader>sf", mode="n", "<cmd>Pick files<CR>", desc = "Pick files" },
         { "<leader>sh", mode="n", "<cmd>Pick help<CR>", desc = "Pick help" },
