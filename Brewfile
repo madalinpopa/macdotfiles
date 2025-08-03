@@ -12,6 +12,7 @@ brew "gemini-cli"
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 cask "1password"
 cask "1password-cli"
+cask "google-chrome"
 cask "jetbrains-toolbox"
 cask "ghostty"
 brew "neovim"
