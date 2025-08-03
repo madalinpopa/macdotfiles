@@ -6,6 +6,7 @@ brew "tmux"
 brew "gcc"
 brew "rustup"
 brew "mise"
+brew "docker"
 brew "gemini-cli"
 
 # APPLICATIONS
