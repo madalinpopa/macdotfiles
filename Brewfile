@@ -20,13 +20,13 @@ brew "neovim"
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 brew "zsh-autosuggestions"
 brew "direnv"
-brew "fd"
 brew "jq"
 
 # TOOLS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 brew "fzf"
 brew "ripgrep"
+brew "fd"
 brew "sk"
 brew "gh"
 brew "wget"
