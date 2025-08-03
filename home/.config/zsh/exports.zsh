@@ -63,4 +63,4 @@ export MANPAGER="less -X"
 # ----------------------------------------------------------------------
 # Others
 # ----------------------------------------------------------------------
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
