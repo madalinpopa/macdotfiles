@@ -1,15 +1,15 @@
 -- auto-format on save
-local lsp_fmt_group = vim.api.nvim_create_augroup("LspFormattingGroup", {})
+local lsp_fmt_group_gopls = vim.api.nvim_create_augroup("LspFormattingGroup", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
-	group = lsp_fmt_group,
+	group = lsp_fmt_group_gopls,
 	callback = function()
-		local efm = vim.lsp.get_clients({ name = "efm" })
+		local gopls = vim.lsp.get_clients({ name = "gopls" })
 
-		if vim.tbl_isempty(efm) then
+		if vim.tbl_isempty(gopls) then
 			return
 		end
 
-		vim.lsp.buf.format({ name = "efm", async = true })
+		vim.lsp.buf.format({ name = "gopls", async = true })
 	end,
 })
 
