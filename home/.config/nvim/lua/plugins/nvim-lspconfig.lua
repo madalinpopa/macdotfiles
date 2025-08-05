@@ -3,7 +3,13 @@ return {
     dependencies = { "mason-org/mason-lspconfig.nvim" },
     config = function()
         local lspconfig = require("lspconfig")
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        
+        -- Get capabilities from cmp_nvim_lsp and vim.lsp.protocol
+        local capabilities = vim.tbl_deep_extend(
+            "force",
+            vim.lsp.protocol.make_client_capabilities(),
+            require("cmp_nvim_lsp").default_capabilities()
+        )
 
         -- The on_attach function is what runs when the LSP attaches to a buffer.
         -- We use it to set keymaps that are only active in that buffer.
@@ -20,28 +26,32 @@ return {
             bufmap("<leader>rn", vim.lsp.buf.rename, "Rename")
             bufmap("<leader>ca", vim.lsp.buf.code_action, "Code Action")
             bufmap("gr", vim.lsp.buf.references, "Go to References")
+            
+            -- Add this for organizing imports
+            if client.supports_method("textDocument/codeAction") then
+                bufmap("<leader>oi", function()
+                    vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+                end, "Organize Imports")
+            end
         end
 
         -- Configure gopls specifically.
-        -- The settings you provide here will be merged with the default settings.
         lspconfig.gopls.setup({
             on_attach = on_attach,
             capabilities = capabilities,
             settings = {
                 gopls = {
-                    -- This is a gopls-specific setting.
-                    -- It enables semantic tokens, which can provide more detailed highlighting.
                     semanticTokens = true,
-                    -- You can add other gopls settings here, for example:
                     analyses = {
                         unusedparams = true,
+                        shadow = true,
                     },
+                    staticcheck = true,
                 },
             },
         })
 
-        -- You can add setups for other language servers here as well.
-        -- For example, for lua_ls:
+        -- Configure lua_ls specifically.
         lspconfig.lua_ls.setup({
             on_attach = on_attach,
             capabilities = capabilities,
@@ -53,5 +63,19 @@ return {
                 },
             },
         })
+
+        -- Configure diagnostic signs
+        vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            underline = true,
+            update_in_insert = false,
+        })
+
+        local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+        for type, icon in pairs(signs) do
+            local hl = "DiagnosticSign" .. type
+            vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+        end
     end,
 }
