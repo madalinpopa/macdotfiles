@@ -16,33 +16,27 @@ if [ -f "$HOME/.local_aliases" ]; then
     . "$HOME/.local_aliases"
 fi
 
-# Start the tmux session if not alraedy in the tmux session
-if [[ ! -n $TMUX  ]]; then
-  # Get the session IDs
-  session_ids="$(tmux list-sessions)"
+# Start tmux interactively, but only if not already in a tmux session.
+if [[ -z "$TMUX" ]]; then
 
-  # Create new session if no sessions exist
-  if [[ -z "$session_ids" ]]; then
-    tmux new-session
-  fi
+  # Get the list of existing tmux sessions into a 'sessions' array.
+  # The ${(f)"..."} syntax splits the command output by line breaks.
+  sessions=(${(f)"$(tmux list-sessions -F '#S' 2>/dev/null)"})
 
-  # Select from following choices
-  #   - Attach existing session
-  #   - Create new session
-  #   - Start without tmux
-  create_new_session="Create new session"
-  start_without_tmux="Start without tmux"
-  choices="$session_ids\n${create_new_session}:\n${start_without_tmux}:"
-  choice="$(echo $choices | fzf | cut -d: -f1)"
+  # Create the list of choices for the user.
+  choices=("${sessions[@]}" "Create new session" "Start without tmux")
 
-  if expr "$choice" : "[0-9]*$" >&/dev/null; then
-    # Attach existing session
+  # Use 'skim' (sk) to present the choices and capture the user's selection.
+  choice=$(printf "%s\n" "${choices[@]}" | sk --margin 10% --color='bw')
+
+  # Check if the user's choice is an existing session name.
+  if (( ${sessions[(Ie)$choice]} )); then
+    # If the choice is an existing session, attach to it.
     tmux attach-session -t "$choice"
-  elif [[ "$choice" = "${create_new_session}" ]]; then
-    # Create new session
+  elif [[ "$choice" == "Create new session" ]]; then
+    # If the user chose to create a new session, do so.
     tmux new-session
-  elif [[ "$choice" = "${start_without_tmux}" ]]; then
-    # Start without tmux
-    :
   fi
+  # If the user selected "Start without tmux" or closed the prompt,
+  # the script does nothing and the shell starts normally.
 fi
