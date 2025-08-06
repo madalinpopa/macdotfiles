@@ -17,6 +17,7 @@ cask "google-chrome"
 cask "jetbrains-toolbox"
 cask "ghostty"
 brew "neovim"
+brew "yazi"
 
 # SHELL
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -32,9 +33,20 @@ brew "fd"
 brew "sk"
 brew "gh"
 brew "wget"
+brew "ffmpeg"
+brew "sevenzip" 
+brew "jq" 
+brew "poppler" 
+brew "zoxide" 
+brew "resvg" 
+brew "imagemagick" 
 
 # FONTS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 cask "font-jetbrains-mono-nerd-font"
 cask "font-caskaydia-mono-nerd-font"
 cask "font-mononoki-nerd-font"
+cask "font-symbols-only-nerd-font"
+
+
+
