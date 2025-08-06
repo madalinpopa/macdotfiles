@@ -10,8 +10,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd $HOME" # `cd` is probably faster to type though
-alias -- -="cd -"
 
 # ----------------------------------------------------------------------
 # Directory shortcuts
@@ -33,14 +31,12 @@ alias k="kubectl"
 # ----------------------------------------------------------------------
 # List commands
 # ----------------------------------------------------------------------
-# List all files colorized in long format, excluding . and ..
-alias la="ls -lAF --color=auto"
 
-# List only directories
-alias lsd="ls -lF --color=auto | grep --color=never '^d'"
-
-# Always use color output for `ls`
-alias ls="command ls -lX --color=auto"
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # ----------------------------------------------------------------------
 # Grep commands

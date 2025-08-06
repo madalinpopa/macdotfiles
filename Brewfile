@@ -39,6 +39,7 @@ brew "jq"
 brew "poppler" 
 brew "zoxide" 
 brew "resvg" 
+brew "eza"
 brew "imagemagick" 
 
 # FONTS
