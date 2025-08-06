@@ -5,7 +5,7 @@ background-opacity = 0.80
 background-blur = 1
 
 # theme = dark:catppuccin-frappe,light:catppuccin-latte
-theme = iTerm2 Dark Background
+theme = ashes
 
 window-height = 30
 window-width = 100
