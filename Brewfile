@@ -8,6 +8,7 @@ brew "rustup"
 brew "mise"
 brew "docker"
 brew "gemini-cli"
+brew "gopls"
 
 # APPLICATIONS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
