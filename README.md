@@ -35,11 +35,11 @@ These are my personal dotfiles for macOS. They configure my shell, editor, and o
 
 This file contains a list of all the applications and tools that I use, managed by [Homebrew](httpss://brew.sh/). This includes:
 
-*   **Development Tools:** `git`, `lazygit`, `tmux`, `gcc`, `rustup`, `mise`, `gemini-cli`
-*   **Applications:** `1password`, `1password-cli`,`google-chrome`, `jetbrains-toolbox`, `ghostty`, `neovim`
-*   **Shell:** `zsh-autosuggestions`, `direnv`, `fd`, `jq`
-*   **Tools:** `fzf`, `ripgrep`, `sk`, `gh`, `wget`
-*   **Fonts:** `font-jetbrains-mono-nerd-font`, `font-caskaydia-mono-nerd-font`, `font-mononoki-nerd-font`
+*   **Development Tools:** `git`, `lazygit`, `tmux`, `gcc`, `rustup`, `mise`, `docker`, `gemini-cli`, `gopls`
+*   **Applications:** `1password`, `1password-cli`, `google-chrome`, `jetbrains-toolbox`, `ghostty`, `neovim`, `yazi`
+*   **Shell:** `zsh-autosuggestions`, `direnv`, `jq`
+*   **Tools:** `fzf`, `ripgrep`, `fd`, `sk`, `gh`, `wget`, `ffmpeg`, `sevenzip`, `jq`, `poppler`, `zoxide`, `resvg`, `eza`, `imagemagick`
+*   **Fonts:** `font-jetbrains-mono-nerd-font`, `font-caskaydia-mono-nerd-font`, `font-mononoki-nerd-font`, `font-symbols-only-nerd-font`
 
 ## Scripts
 
