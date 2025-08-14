@@ -14,3 +14,6 @@ fi
 
 echo "  -> Install neovim package"
 npm install -g neovim &>/dev/null
+
+echo "  -> Install gemini-cli"
+npm install -g @google/gemini-cli &>/dev/null
