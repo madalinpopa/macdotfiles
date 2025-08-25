@@ -1,0 +1,6 @@
+[user]
+name = "Madalin Popa"
+email = "contact@madalinpopa.com"
+
+[ui]
+default-command = ["log", "--limit", "5"]

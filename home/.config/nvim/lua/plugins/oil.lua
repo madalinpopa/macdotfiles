@@ -9,6 +9,7 @@ return {
       is_always_hidden = function(name, bufnr)
         local always = {
           [".git"] = true,
+          [".jj"] = true,
           ["node_modules"] = true,
           [".DS_Store"] = true,
           ["__pycache__"] = true,
