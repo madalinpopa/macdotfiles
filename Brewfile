@@ -9,6 +9,7 @@ brew "mise"
 brew "docker"
 brew "gemini-cli"
 brew "gopls"
+brew "jj"
 
 # APPLICATIONS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
