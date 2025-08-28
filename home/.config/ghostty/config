@@ -5,7 +5,7 @@ background-opacity = 0.90
 background-blur = 1
 
 # theme = dark:catppuccin-frappe,light:catppuccin-latte
-theme = ashes
+theme = vesper
 
 window-height = 30
 window-width = 100
