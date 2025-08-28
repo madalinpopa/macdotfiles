@@ -10,4 +10,6 @@ theme = vesper
 window-height = 30
 window-width = 100
 
+maximize = true
+
 macos-titlebar-style = hidden

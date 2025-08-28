@@ -37,6 +37,7 @@ if [[ -z "$TMUX" ]]; then
     # If the user chose to create a new session, do so.
     tmux new-session -s "$(echo $HOME)"
   fi
+
   # If the user selected "Start without tmux" or closed the prompt,
   # the script does nothing and the shell starts normally.
 fi
