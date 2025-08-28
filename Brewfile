@@ -9,6 +9,7 @@ brew "mise"
 brew "docker"
 brew "gopls"
 brew "jj"
+brew "starship"
 
 # APPLICATIONS
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
