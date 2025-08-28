@@ -51,5 +51,5 @@ fi
 # jj
 # ----------------------------------------------------------------------
 if command -v jj &> /dev/null; then
-  source <(jj util completion zsh)
+  source <(COMPLETE=zsh jj)
 fi
