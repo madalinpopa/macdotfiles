@@ -4,17 +4,17 @@ return {
 	dependencies = {
 		-- `lspkind` adds cool icons to the completion menu (e.g., a Go icon for functions).
 		"onsails/lspkind.nvim",
-        -- `cmp-nvim-lsp` is essential for getting suggestions from the LSP server (gopls).
-        "hrsh7th/cmp-nvim-lsp",
-        -- `cmp-buffer` suggests words from the current buffer, which is useful for Go.
-        "hrsh7th/cmp-buffer",
-        -- `cmp-path` suggests file paths, which is great for Go projects.
-        "hrsh7th/cmp-path",
-        -- `cmp-cmdline` provides completion for command-line commands, which is useful in the terminal.
-        "hrsh7th/cmp-cmdline",
+		-- `cmp-nvim-lsp` is essential for getting suggestions from the LSP server (gopls).
+		"hrsh7th/cmp-nvim-lsp",
+		-- `cmp-buffer` suggests words from the current buffer, which is useful for Go.
+		"hrsh7th/cmp-buffer",
+		-- `cmp-path` suggests file paths, which is great for Go projects.
+		"hrsh7th/cmp-path",
+		-- `cmp-cmdline` provides completion for command-line commands, which is useful in the terminal.
+		"hrsh7th/cmp-cmdline",
 		{
 
-            -- `LuaSnip` is a snippet engine that allows you to use code snippets in your Go files.
+			-- `LuaSnip` is a snippet engine that allows you to use code snippets in your Go files.
 			"L3MON4D3/LuaSnip",
 			version = "2.*",
 			build = "make install_jsregexp",
@@ -64,3 +64,4 @@ return {
 		})
 	end,
 }
+
