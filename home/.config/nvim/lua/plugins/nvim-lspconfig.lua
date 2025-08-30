@@ -1,6 +1,9 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = { "mason-org/mason-lspconfig.nvim" },
+	opts = {
+		ensure_installed = { "lua_ls", "gopls" },
+	},
 	config = function()
 		local lspconfig = require("lspconfig")
 
