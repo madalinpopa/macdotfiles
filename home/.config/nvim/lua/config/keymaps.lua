@@ -1,9 +1,9 @@
 -- Reload neovim configuration
-vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
+vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
 
 -- Write and quit shortcuts
-vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':q!<CR>')
+vim.keymap.set("n", "<leader>w", ":write<CR>")
+vim.keymap.set("n", "<leader>q", ":q!<CR>")
 
 -- Quick file navigation
 -- vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
@@ -44,7 +44,8 @@ vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
 -- Better window navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+-- vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+-- vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
+-- vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
+-- vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+
