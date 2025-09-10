@@ -41,3 +41,6 @@ if [[ -z "$TMUX" ]]; then
   # If the user selected "Start without tmux" or closed the prompt,
   # the script does nothing and the shell starts normally.
 fi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
