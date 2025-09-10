@@ -2,5 +2,27 @@
 name = "Madalin Popa"
 email = "contact@madalinpopa.com"
 
+[git]
+auto-local-bookmark = true
+
+[aliases]
+l = ["log", "-r", "ancestors(reachable(@, mutable()), 2)"]
+n = ["new"]
+
 [ui]
+editor = "nvim"
 default-command = ["st"]
+
+[templates]
+draft_commit_description = '''
+concat(  
+  coalesce(description, default_commit_description, "\n"),
+  surround(
+      "\nJJ: This commit contains the following changes:\n", "",
+      indent("JJ:     ", diff.summary()),
+    ),
+  "\nJJ: ignore-rest\n",
+  diff.git()
+
+)
+'''
