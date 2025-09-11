@@ -1,5 +1,10 @@
 font-size = 18
 font-family = "JetBrainsMono Nerd Font"
+font-style = Medium
+font-style-bold = Bold
+font-style-italic = Italic
+font-style-bold-italic = Bold Italic
+
 
 background-opacity = 0.90
 background-blur = 1
