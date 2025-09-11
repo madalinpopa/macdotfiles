@@ -7,7 +7,33 @@ return {
 		require("mini.pick").setup()
 		require("mini.extra").setup()
 		require("mini.git").setup()
-		require("mini.notify").setup()
+		require("mini.notify").setup({
+			-- Content management
+			content = {
+				format = nil,
+				sort = nil,
+			},
+
+			-- Notifications about LSP progress
+			lsp_progress = {
+				enable = true,
+				level = "INFO",
+				duration_last = 1000,
+			},
+
+			-- Window options
+			window = {
+				config = {},
+				max_width_share = 0.382,
+				winblend = 60, -- adjust for more/less transparency
+			},
+		})
+
+		-- Clear background highlights for full transparency
+		vim.api.nvim_set_hl(0, "MiniNotifyNormal", { bg = "NONE" })
+		vim.api.nvim_set_hl(0, "MiniNotifyBorder", { bg = "NONE" })
+		vim.api.nvim_set_hl(0, "MiniNotifyTitle", { bg = "NONE" })
+		vim.api.nvim_set_hl(0, "MiniNotifyContent", { bg = "NONE" })
 	end,
 	keys = {
 		{ "<leader>sf", mode = "n", "<cmd>Pick files<CR>", desc = "Pick files" },
