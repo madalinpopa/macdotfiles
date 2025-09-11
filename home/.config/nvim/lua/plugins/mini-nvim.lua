@@ -23,17 +23,13 @@ return {
 
 			-- Window options
 			window = {
-				config = {},
+				config = {
+					style = "minimal",
+				},
 				max_width_share = 0.382,
-				winblend = 60, -- adjust for more/less transparency
+				winblend = 90, -- adjust for more/less transparency
 			},
 		})
-
-		-- Clear background highlights for full transparency
-		vim.api.nvim_set_hl(0, "MiniNotifyNormal", { bg = "NONE" })
-		vim.api.nvim_set_hl(0, "MiniNotifyBorder", { bg = "NONE" })
-		vim.api.nvim_set_hl(0, "MiniNotifyTitle", { bg = "NONE" })
-		vim.api.nvim_set_hl(0, "MiniNotifyContent", { bg = "NONE" })
 	end,
 	keys = {
 		{ "<leader>sf", mode = "n", "<cmd>Pick files<CR>", desc = "Pick files" },
