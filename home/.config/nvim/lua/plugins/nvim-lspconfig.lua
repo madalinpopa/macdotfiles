@@ -69,7 +69,7 @@ return {
 						unusedparams = true,
 						unusedwrite = true,
 					},
-					usePlaceholders = true,
+					usePlaceholders = false,
 					completeUnimported = true,
 					staticcheck = true,
 					directoryFilters = { "-.git", "-.jj", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
