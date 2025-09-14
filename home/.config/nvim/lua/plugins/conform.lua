@@ -13,6 +13,8 @@ return {
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 
 				go = { "goimports", "gofmt" },
+
+				templ = { "templ" },
 			},
 		})
 	end,
