@@ -14,7 +14,7 @@ return {
 
 				go = { "goimports", "gofmt" },
 
-				templ = { "templ" },
+				templ = { "templ", lsp_format = "fallback" },
 			},
 		})
 	end,
