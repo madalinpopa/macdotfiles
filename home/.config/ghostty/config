@@ -16,3 +16,5 @@ window-height = 30
 window-width = 100
 
 macos-titlebar-style = hidden
+adjust-cell-height = 10%
+
