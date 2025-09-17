@@ -41,7 +41,7 @@ return {
 					[".mypy_cache"] = true,
 					[".ansible"] = true,
 				}
-				if always[name] then
+				if always[name] or name:match("_templ%.go$") then
 					return true
 				end
 				return false
