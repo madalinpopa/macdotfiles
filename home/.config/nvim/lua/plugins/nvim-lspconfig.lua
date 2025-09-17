@@ -67,6 +67,7 @@ return {
 					analyses = {
 						nilness = true,
 						unusedparams = true,
+						["ST1000"] = false,
 						unusedwrite = true,
 					},
 					usePlaceholders = false,
