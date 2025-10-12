@@ -45,12 +45,12 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader>sf", mode = "n", "<cmd>Pick files<CR>", desc = "Pick files" },
-		{ "<leader>sh", mode = "n", "<cmd>Pick help<CR>", desc = "Pick help" },
+		{ "<leader>f", mode = "n", "<cmd>Pick files<CR>", desc = "Pick files" },
+		{ "<leader>h", mode = "n", "<cmd>Pick help<CR>", desc = "Pick help" },
 		{ "<leader> ", mode = "n", "<cmd>Pick buffers<CR>", desc = "Pick buffers" },
-		{ "<leader>sg", mode = "n", "<cmd>Pick grep_live<CR>", desc = "Pick grep_livc" },
-		{ "<leader>sc", mode = "n", "<cmd>Pick commands<CR>", desc = "Pick commands" },
-		{ "<leader>sd", mode = "n", "<cmd>Pick diagnostic<CR>", desc = "Pick dignostic" },
-		{ "<leader>se", mode = "n", "<cmd>Pick explorer<CR>", desc = "Pick explorer" },
+		{ "<leader>g", mode = "n", "<cmd>Pick grep_live<CR>", desc = "Pick grep_livc" },
+		{ "<leader>c", mode = "n", "<cmd>Pick commands<CR>", desc = "Pick commands" },
+		{ "<leader>d", mode = "n", "<cmd>Pick diagnostic<CR>", desc = "Pick dignostic" },
+		{ "<leader>e", mode = "n", "<cmd>Pick explorer<CR>", desc = "Pick explorer" },
 	},
 }
