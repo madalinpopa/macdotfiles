@@ -12,6 +12,6 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
-		{ "<leader>c", mode = "n", "<cmd>CodeCompanionActions<cr>", desc = "Toggle CodeCompanionActions" },
+		{ "<leader>a", mode = "n", "<cmd>CodeCompanionActions<cr>", desc = "Toggle CodeCompanionActions" },
 	},
 }

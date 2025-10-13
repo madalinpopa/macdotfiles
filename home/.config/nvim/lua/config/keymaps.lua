@@ -3,7 +3,7 @@ vim.keymap.set("n", "<leader>o", ":update<CR> :source<CR>")
 
 -- Write and quit shortcuts
 -- vim.keymap.set("n", "<leader>w", ":write<CR>")
--- vim.keymap.set("n", "<leader>q", ":q!<CR>")
+vim.keymap.set("n", "<leader>q", ":q!<CR>")
 
 -- Quick file navigation
 -- vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
