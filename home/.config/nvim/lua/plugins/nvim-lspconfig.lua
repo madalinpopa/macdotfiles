@@ -28,6 +28,15 @@ return {
 			bufmap("<leader>k", vim.lsp.buf.signature_help, "Signature Help")
 			bufmap("<leader>rn", vim.lsp.buf.rename, "Rename")
 			bufmap("<leader>ca", vim.lsp.buf.code_action, "Code Action")
+
+			-- Add a keymap for code actions in visual mode
+			vim.keymap.set(
+				"v",
+				"<leader>ca",
+				vim.lsp.buf.code_action,
+				{ buffer = bufnr, noremap = true, silent = true, desc = "Code Action" }
+			)
+
 			bufmap("gr", vim.lsp.buf.references, "Go to References")
 
 			-- Add this for organizing imports
