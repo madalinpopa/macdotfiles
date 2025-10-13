@@ -28,7 +28,6 @@ return {
 			bufmap("<leader>k", vim.lsp.buf.signature_help, "Signature Help")
 			bufmap("<leader>rn", vim.lsp.buf.rename, "Rename")
 			bufmap("<leader>ca", vim.lsp.buf.code_action, "Code Action")
-			bufmap("<leader>s", vim.lsp.buf.workspace_symbol, "Search Workspace Symbols")
 
 			-- Add a keymap for code actions in visual mode
 			vim.keymap.set(
