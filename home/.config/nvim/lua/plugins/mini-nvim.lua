@@ -55,5 +55,6 @@ return {
 		{ "<leader>l", mode = "n", "<cmd>Pick buf_lines scope='current'<CR>", desc = "Pick buffer lines" },
 		{ "<leader>w", mode = "n", "<cmd>Pick lsp scope='workspace_symbol'<CR>", desc = "Pick workspace symbols" },
 		{ "<leader>s", mode = "n", "<cmd>Pick lsp scope='document_symbol'<CR>", desc = "Pick document symbols" },
+		{ "<leader>r", mode = "n", "<cmd>Pick lsp scope='references'<CR>", desc = "Pick symbol references" },
 	},
 }
