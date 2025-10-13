@@ -18,6 +18,7 @@ cask "1password-cli"
 cask "google-chrome"
 cask "jetbrains-toolbox"
 cask "ghostty"
+cask "maccy"
 brew "neovim"
 brew "yazi"
 
