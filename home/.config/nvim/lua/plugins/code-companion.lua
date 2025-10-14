@@ -3,14 +3,16 @@ return {
 	opts = {
 		strategies = {
 			chat = {
-				adapter = "gemini_cli",
+				adapter = "copilot",
 			},
 			inline = {
-				adapter = "gemini_cli",
+				adapter = "copilot",
+				-- model = "claude-sonnet-4",
+				default = "gpt-4.1",
 			},
-			cmd = {
-				adapter = "gemini",
-			},
+			-- cmd = {
+			-- 	adapter = "copilot",
+			-- },
 		},
 		adapters = {
 			acp = {
