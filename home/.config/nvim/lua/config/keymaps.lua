@@ -48,3 +48,13 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" }
 -- vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
 -- vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
 -- vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+
+vim.keymap.set("n", "<leader>1", "1gt", { desc = "Go to tab 1" })
+vim.keymap.set("n", "<leader>2", "2gt", { desc = "Go to tab 2" })
+vim.keymap.set("n", "<leader>3", "3gt", { desc = "Go to tab 3" })
+vim.keymap.set("n", "<leader>4", "4gt", { desc = "Go to tab 4" })
+vim.keymap.set("n", "<leader>5", "5gt", { desc = "Go to tab 5" })
+vim.keymap.set("n", "<leader>6", "6gt", { desc = "Go to tab 6" })
+vim.keymap.set("n", "<leader>7", "7gt", { desc = "Go to tab 7" })
+vim.keymap.set("n", "<leader>8", "8gt", { desc = "Go to tab 8" })
+vim.keymap.set("n", "<leader>9", "9gt", { desc = "Go to tab 9" })
