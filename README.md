@@ -35,7 +35,7 @@ These are my personal dotfiles for macOS. They configure my shell, editor, and o
 
 This file contains a list of all the applications and tools that I use, managed by [Homebrew](httpss://brew.sh/). This includes:
 
-*   **Development Tools:** `git`, `lazygit`, `tmux`, `gcc`, `rustup`, `mise`, `docker`, `gemini-cli`, `gopls`
+*   **Development Tools:** `git`, `lazygit`, `tmux`, `gcc`, `rustup`, `mise`, `docker`, `gopls`
 *   **Applications:** `1password`, `1password-cli`, `google-chrome`, `jetbrains-toolbox`, `ghostty`, `neovim`, `yazi`
 *   **Shell:** `zsh-autosuggestions`, `direnv`, `jq`
 *   **Tools:** `fzf`, `ripgrep`, `fd`, `sk`, `gh`, `wget`, `ffmpeg`, `sevenzip`, `jq`, `poppler`, `zoxide`, `resvg`, `eza`, `imagemagick`
