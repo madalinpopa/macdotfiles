@@ -4,6 +4,7 @@ email = "contact@madalinpopa.com"
 
 [git]
 auto-local-bookmark = true
+push-new-bookmarks = true
 
 [aliases]
 l = ["log", "-r", "ancestors(reachable(@, mutable()), 2)"]
@@ -26,3 +27,4 @@ concat(
 
 )
 '''
+git_push_bookmark = '"branch/push-" ++ change_id.short()'
