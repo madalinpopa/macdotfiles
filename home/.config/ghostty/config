@@ -18,4 +18,5 @@ window-width = 100
 macos-titlebar-style = hidden
 adjust-cell-height = 10%
 
+
 #custom-shader = shaders/cursor_blaze.glsl
