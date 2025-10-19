@@ -51,7 +51,7 @@ return {
 		{ "<leader>g", mode = "n", "<cmd>Pick grep_live<CR>", desc = "Pick grep_livc" },
 		{ "<leader>c", mode = "n", "<cmd>Pick commands<CR>", desc = "Pick commands" },
 		{ "<leader>d", mode = "n", "<cmd>Pick diagnostic<CR>", desc = "Pick dignostic" },
-		{ "<leader>e", mode = "n", "<cmd>Pick explorer<CR>", desc = "Pick explorer" },
+		{ "<leader>E", mode = "n", "<cmd>Pick explorer<CR>", desc = "Pick explorer" },
 		{ "<leader>s", mode = "n", "<cmd>Pick buf_lines scope='current'<CR>", desc = "Pick buffer lines" },
 		-- { "<leader>w", mode = "n", "<cmd>Pick lsp scope='workspace_symbol'<CR>", desc = "Pick workspace symbols" },
 		{ "<leader>t", mode = "n", "<cmd>Pick lsp scope='document_symbol'<CR>", desc = "Pick document symbols" },
