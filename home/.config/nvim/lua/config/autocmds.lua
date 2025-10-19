@@ -40,3 +40,30 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, { command = "checktime" })
+
+-- Automatically write a session when exiting a project for the first time
+
+local session_dir = vim.fn.stdpath("data") .. "/sessions"
+vim.api.nvim_create_autocmd("VimLeavePre", {
+
+	callback = function()
+		local sessions = require("mini.sessions")
+		-- Get session directory and ensure it exists
+		vim.fn.mkdir(session_dir, "p")
+
+		-- Use the folder name as the session name
+		local cwd = vim.fn.getcwd()
+		local session_name = vim.fn.fnamemodify(cwd, ":t")
+		local session_path = session_dir .. "/" .. session_name .. ".vim"
+
+		-- If the session doesn’t exist yet, create it
+		if not vim.loop.fs_stat(session_path) then
+			print("(mini.sessions) Creating first-time session for project: " .. session_name)
+			sessions.write(session_name)
+			return
+		end
+
+		-- Otherwise, just update it
+		sessions.write(session_name)
+	end,
+})
