@@ -4,6 +4,7 @@ return {
 		strategies = {
 			chat = {
 				adapter = "copilot",
+				default = "gpt-5-mini",
 			},
 			inline = {
 				adapter = "copilot",

@@ -86,4 +86,3 @@ vim.opt.diffopt:append("linematch:60")
 -- Performance improvements
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
-
