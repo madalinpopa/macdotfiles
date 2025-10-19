@@ -4,18 +4,6 @@ return {
 	lazy = false,
 	priority = 100,
 	config = function()
-		-- Create session directory if it doesn't exist
-		local session_dir = vim.fn.stdpath("data") .. "/sessions"
-		vim.fn.mkdir(session_dir, "p")
-
-		require("mini.sessions").setup({
-			autoread = true,
-			autowrite = true,
-			directory = session_dir,
-			file = "",
-			force = { write = true, delete = true },
-			-- verbose = { read = true, write = true, delete = true },
-		})
 		require("mini.pick").setup({
 			window = {
 				config = {
