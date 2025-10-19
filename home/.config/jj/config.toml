@@ -13,6 +13,8 @@ n = ["new"]
 [ui]
 editor = "nvim"
 default-command = ["st"]
+pager = "delta"
+diff-formatter = ":git"
 
 [templates]
 draft_commit_description = '''
