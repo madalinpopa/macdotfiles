@@ -126,3 +126,6 @@
 	process = git-lfs filter-process
 [gitbutler]
 	gitbutlerCommitter = 1
+
+[delta]
+  line-numbers = true
