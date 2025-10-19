@@ -20,6 +20,11 @@ return {
 		})
 		require("mini.extra").setup()
 		require("mini.git").setup()
+		require("mini.diff").setup({
+			view = {
+				style = "sign",
+			},
+		})
 		require("mini.notify").setup({
 			-- Content management
 			content = {
@@ -53,7 +58,7 @@ return {
 		{ "<leader>d", mode = "n", "<cmd>Pick diagnostic<CR>", desc = "Pick dignostic" },
 		{ "<leader>E", mode = "n", "<cmd>Pick explorer<CR>", desc = "Pick explorer" },
 		{ "<leader>s", mode = "n", "<cmd>Pick buf_lines scope='current'<CR>", desc = "Pick buffer lines" },
-		-- { "<leader>w", mode = "n", "<cmd>Pick lsp scope='workspace_symbol'<CR>", desc = "Pick workspace symbols" },
+		{ "<leader>T", mode = "n", "<cmd>Pick lsp scope='workspace_symbol'<CR>", desc = "Pick workspace symbols" },
 		{ "<leader>t", mode = "n", "<cmd>Pick lsp scope='document_symbol'<CR>", desc = "Pick document symbols" },
 		{ "<leader>r", mode = "n", "<cmd>Pick lsp scope='references'<CR>", desc = "Pick symbol references" },
 	},
