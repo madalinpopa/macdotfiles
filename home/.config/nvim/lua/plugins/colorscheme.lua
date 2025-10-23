@@ -51,48 +51,19 @@
 -- }
 
 return {
-	"vague2k/vague.nvim",
+	"vague-theme/vague.nvim",
 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
 	priority = 1000, -- make sure to load this before all the other plugins
 	config = function()
 		require("vague").setup({
 			transparent = true,
-			bold = true,
-			italic = true,
-			style = {
-				-- "none" is the same thing as default. But "italic" and "bold" are also valid options
-				boolean = "bold",
-				number = "none",
-				float = "none",
-				error = "bold",
-				comments = "italic",
-				conditionals = "none",
-				functions = "bold",
-				headings = "bold",
-				operators = "none",
-				strings = "italic",
-				variables = "none",
-
-				-- keywords
-				keywords = "bold",
-				keyword_return = "italic",
-				keywords_loop = "none",
-				keywords_label = "none",
-				keywords_exception = "none",
-
-				-- builtin
-				builtin_constants = "bold",
-				builtin_functions = "none",
-				builtin_types = "bold",
-				builtin_variables = "none",
-			},
 		})
 		vim.cmd("colorscheme vague")
 
 		-- transparent background
 		-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-		vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-		vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+		-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+		-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+		-- vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
 	end,
 }
