@@ -52,6 +52,7 @@ return {
 	keys = {
 		{ "<leader>f", mode = "n", "<cmd>Pick files<CR>", desc = "Pick files" },
 		{ "<leader>h", mode = "n", "<cmd>Pick help<CR>", desc = "Pick help" },
+		{ "<leader>r", mode = "n", "<cmd>Pick resume<CR>", desc = "Pick resume" },
 		{ "<leader> ", mode = "n", "<cmd>Pick buffers<CR>", desc = "Pick buffers" },
 		{ "<leader>g", mode = "n", "<cmd>Pick grep_live<CR>", desc = "Pick grep_livc" },
 		{ "<leader>c", mode = "n", "<cmd>Pick commands<CR>", desc = "Pick commands" },
@@ -60,6 +61,6 @@ return {
 		{ "<leader>s", mode = "n", "<cmd>Pick buf_lines scope='current'<CR>", desc = "Pick buffer lines" },
 		{ "<leader>T", mode = "n", "<cmd>Pick lsp scope='workspace_symbol'<CR>", desc = "Pick workspace symbols" },
 		{ "<leader>t", mode = "n", "<cmd>Pick lsp scope='document_symbol'<CR>", desc = "Pick document symbols" },
-		{ "<leader>r", mode = "n", "<cmd>Pick lsp scope='references'<CR>", desc = "Pick symbol references" },
+		{ "<leader>R", mode = "n", "<cmd>Pick lsp scope='references'<CR>", desc = "Pick symbol references" },
 	},
 }
