@@ -2,9 +2,8 @@
 name = "Madalin Popa"
 email = "contact@madalinpopa.com"
 
-[git]
-auto-local-bookmark = true
-push-new-bookmarks = true
+[remotes.origin]
+auto-track-bookmarks = "glob:*"
 
 [aliases]
 l = ["log", "-r", "ancestors(reachable(@, mutable()), 2)"]
