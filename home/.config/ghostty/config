@@ -1,4 +1,4 @@
-font-size = 17
+font-size = 18
 font-family = "JetBrainsMono Nerd Font Propo"
 font-style = SemiBold
 font-family-bold = JetBrainsMono Nerd Font Propo Bold
@@ -6,7 +6,7 @@ font-family-italic = JetBrainsMono Nerd Font Propo Italic
 font-family-bold-italic = JetBrainsMono Nerd Font Propo Bold Italic
 
 
-background-opacity = 0.90
+background-opacity = 0.95
 background-blur = 1
 
 # theme = dark:catppuccin-frappe,light:catppuccin-latte
