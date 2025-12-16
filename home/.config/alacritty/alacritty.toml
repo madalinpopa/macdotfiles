@@ -1,0 +1,38 @@
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 19.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[font.offset]
+x = 1
+y = 4
+
+[scrolling]
+history = 10000
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+opacity = 0.9
+blur = true
+decorations = "Transparent"
+startup_mode = "Maximized"
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 120
+lines = 30
+
+[window.padding]
+x = 5
+y = 5
+
+[keyboard]
+bindings = [
+  { key = "I", mods = "Control", chars = "\u001b[105;5u"  }
+]
