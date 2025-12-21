@@ -33,6 +33,7 @@ require("lazy").setup({
 })
 
 require("config.autocmds")
+require("config.lsp")
 
 vim.o.showtabline = 2
 vim.o.tabline = "%!v:lua.MyTabLine()"
