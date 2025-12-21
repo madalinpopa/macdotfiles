@@ -1,82 +1,56 @@
 local capabilities = vim.tbl_deep_extend(
-	"force",
-	vim.lsp.protocol.make_client_capabilities(),
-	require("blink.cmp").get_lsp_capabilities()
+  "force",
+  vim.lsp.protocol.make_client_capabilities(),
+  require("blink.cmp").get_lsp_capabilities()
 )
-
+--
 vim.lsp.config("*", {
-	capabilities = capabilities,
+  capabilities = capabilities,
 })
 
--- Python LSP
-vim.lsp.config("ty", {
-	settings = {
-		ty = {},
-	},
-})
-vim.lsp.enable("ty")
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('my.lsp', {}),
+  callback = function(args)
+    local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+    if client:supports_method('textDocument/implementation') then
+      -- Create a keymap for vim.lsp.buf.implementation ...
+      local bufmap = function(keys, func, desc)
+        vim.keymap.set("n", keys, func, { buffer = bufnr, noremap = true, silent = true, desc = desc })
+      end
+      bufmap("gD", vim.lsp.buf.declaration, "Go to Declaration")
+      bufmap("gd", vim.lsp.buf.definition, "Go to Definition")
+      bufmap("K", vim.lsp.buf.hover, "Hover Documentation")
+      bufmap("gi", vim.lsp.buf.implementation, "Go to Implementation")
+      bufmap("<leader>k", vim.lsp.buf.signature_help, "Signature Help")
+      bufmap("<leader>rn", vim.lsp.buf.rename, "Rename")
+      bufmap("<leader>ca", vim.lsp.buf.code_action, "Code Action")
+      bufmap("gr", vim.lsp.buf.references, "Go to References")
+    end
 
--- Go LSP
-vim.lsp.config("gopls", {
-	settings = {
-		gopls = {
-			gofumpt = true,
-			codelenses = {
-				gc_details = false,
-				generate = true,
-				regenerate_cgo = true,
-				run_govulncheck = true,
-				test = true,
-				tidy = true,
-				upgrade_dependency = true,
-				vendor = true,
-			},
-			hints = {
-				assignVariableTypes = true,
-				compositeLiteralFields = true,
-				compositeLiteralTypes = true,
-				constantValues = true,
-				functionTypeParameters = true,
-				parameterNames = true,
-				rangeVariableTypes = true,
-			},
-			analyses = {
-				nilness = true,
-				unusedparams = true,
-				["ST1000"] = false,
-				unusedwrite = true,
-			},
-			usePlaceholders = false,
-			completeUnimported = true,
-			staticcheck = true,
-			directoryFilters = { "-.git", "-.jj", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
-			semanticTokens = true,
-		},
-	},
-})
-vim.lsp.enable("gopls")
 
--- Lua LSP
-vim.lsp.config("lua_ls", {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
-		},
-	},
-})
+    -- Auto-format ("lint") on save.
+    -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
+    if not client:supports_method('textDocument/willSaveWaitUntil')
+        and client:supports_method('textDocument/formatting') then
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
+        buffer = args.buf,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
+        end,
+      })
+    end
 
--- Configure diagnostic signs
-vim.diagnostic.config({
-	virtual_text = true,
-	signs = true,
-	underline = true,
-	update_in_insert = false,
+    -- Auto-organize imports on save.
+    if not client:supports_method("textDocument/willSaveWaitUntil")
+        and client:supports_method("textDocument/codeAction") then
+      vim.api.nvim_create_autocmd('BufWritePost', {
+        group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
+        buffer = args.buf,
+        callback = function()
+          vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
+        end,
+      })
+    end
+  end,
 })
-
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
