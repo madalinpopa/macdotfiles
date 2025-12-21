@@ -2,5 +2,5 @@
 -- title : Minimal neovim configuration
 -- author: Madalin Popa
 -- ================================================================================================
-
 require("config")
+
