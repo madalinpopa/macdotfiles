@@ -4,7 +4,8 @@ return {
     ensure_installed = { "lua_ls", "gopls", "ty" },
     automatic_enable = {
       "lua_ls",
-      "gopls"
+      "gopls",
+      "ty",
     }
   },
   dependencies = {
