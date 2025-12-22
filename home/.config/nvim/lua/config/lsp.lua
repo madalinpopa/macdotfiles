@@ -40,17 +40,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end,
       })
     end
-
-    -- Auto-organize imports on save.
-    if not client:supports_method("textDocument/willSaveWaitUntil")
-        and client:supports_method("textDocument/codeAction") then
-      vim.api.nvim_create_autocmd('BufWritePost', {
-        group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
-        buffer = args.buf,
-        callback = function()
-          vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })
-        end,
-      })
-    end
   end,
 })
