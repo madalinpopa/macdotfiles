@@ -1,0 +1,20 @@
+return {
+  "stevearc/conform.nvim",
+  opts = {
+    formatters = {
+      yamlfmt = {
+        args = {
+          "-formatter",
+          "indent=2,include_document_start=false,retain_line_breaks=true,retain_line_breaks_single=true,scan_folded_as_literal=true",
+          "-",
+        },
+      },
+    },
+
+    formatters_by_ft = {
+      lua = { "stylua" },
+      go = { "goimports", "gofmt" },
+      python = { "isort", "black" },
+    },
+  }
+}
