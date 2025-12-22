@@ -29,3 +29,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, { command = "checktime" })
+
+-- auto-format on save
+-- Used by conform plugin to format buffers
+local conform_group = vim.api.nvim_create_augroup("ConformGroup", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = conform_group,
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
