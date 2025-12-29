@@ -1,5 +1,8 @@
 return {
   "nicolasgb/jj.nvim",
+  dependencies = {
+    "folke/snacks.nvim", -- Optional only if you use picker's
+  },
   config = function()
     local jj = require("jj")
     jj.setup({
