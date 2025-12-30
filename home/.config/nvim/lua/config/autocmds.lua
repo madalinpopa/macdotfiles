@@ -1,3 +1,6 @@
+-- register templ filetype
+vim.filetype.add({ extension = { templ = "templ" } })
+
 -- disable auto comment on new line
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "*",
